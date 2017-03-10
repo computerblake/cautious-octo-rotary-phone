@@ -7,17 +7,17 @@
 
 <p>
   <strong>Description:</strong>
-  <%= @product.description %>
+  <%= (strip_tags(@product.description)) %>
 </p>
 
 <p>
   <strong>Image url:</strong>
-  <%= @product.image_url %>
+  <%= image_tag(@product.image_url) %>
 </p>
 
 <p>
   <strong>Price:</strong>
-  <%= @product.price %>
+   &#36 <%= @product.price %>
 </p>
 
 <%= link_to 'Edit', edit_product_path(@product) %> |
