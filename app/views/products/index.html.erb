@@ -20,8 +20,8 @@
         <td><%= (strip_tags(product.description)) %></td>
         <td><%= image_tag(product.image_url) %></td>
         <td><%= number_to_currency(product.price) %></td>
-        <td><%= link_to 'Show', product %></td>
-        <td><%= link_to 'Edit', edit_product_path(product) %></td>
+        <td><%= link_to 'Show', product, :class => "btn btn-info" %></td>
+        <td><%= link_to 'Edit', edit_product_path(product), :class => "btn btn-info" %></td>
         <td><%= link_to 'Destroy', product, :class => "btn btn-danger" , method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
